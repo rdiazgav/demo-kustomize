@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: hello-world2
   labels:
-    application: hello-world
+    application: hello-world2
 spec:
   replicas: 1
   strategy:
@@ -14,11 +14,11 @@ spec:
       maxUnavailable: 0
   selector:
     matchLabels:
-      application: hello-world
+      application: hello-world2
   template:
     metadata:
       labels:
-        application: hello-world
+        application: hello-world2
     spec:
       containers:
         - name: http-server

@@ -1,0 +1,10 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+bases:
+  - namespace
+resources:
+  - app/cm-content.yml  
+  - app/deployment.yml  
+  - app/route.yml  
+  - app/service.yml

@@ -34,7 +34,7 @@ spec:
               memory: "64Mi"
               cpu: "250m"
           volumeMounts:
-            - name: html-content
+            - name: html-content2
               mountPath: /var/www/html
       volumes:
         - name: html-content2

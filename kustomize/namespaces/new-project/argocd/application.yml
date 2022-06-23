@@ -1,0 +1,19 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: appargo
+  namespace: openshift-gitops
+spec:
+  project: ocp4-examples
+  source:
+    repoURL: https://github.com/rdiazgav/ocp4-apps.git
+    path: argoapp
+    targetRevision: master
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: appargo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

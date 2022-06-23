@@ -2,6 +2,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 bases:
-  - namespaces/frontend
-  - namespaces/backend-app
-  #- namespaces/new-project
+  # - namespaces/frontend
+  # - namespaces/backend-app
+  - namespaces/new-project

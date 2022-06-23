@@ -1,0 +1,9 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: backend-app
+  annotations:
+    openshift.io/display-name: Backend-app
+    openshift.io/description: Backend-app deployment
+    openshift.io/requester: Kustomize

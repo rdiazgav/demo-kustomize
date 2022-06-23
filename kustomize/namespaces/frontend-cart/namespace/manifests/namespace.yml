@@ -1,9 +1,0 @@
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: frontend-cart
-  annotations:
-    openshift.io/display-name: Frontend cart
-    openshift.io/description: Frontend cart deployment
-    openshift.io/requester: Kustomize

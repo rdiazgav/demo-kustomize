@@ -1,0 +1,18 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: ocp4-examples
+  namespace: openshift-gitops
+spec:
+  description: Deploy ocp4-examples
+  sourceRepos:
+    - https://github.com/rdiazgav/demo-kustomize.git
+  destinations:
+    - namespace: frontend* # frontend
+      server: https://kubernetes.default.svc
+    - namespace: backend* # backend-app
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'

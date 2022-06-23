@@ -2,14 +2,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: ocp4-examples
-  namespace: openshift-gitops
+  name: ocp4-apps
+  namespace: openshift-operators
 spec:
-  description: Deploy ocp4-examples
+  description: Deploy ocp4-apps
   sourceRepos:
     - https://github.com/rdiazgav/demo-kustomize.git
   destinations:
-    - namespace: appargo* # frontend
+    - namespace: argoapp* # frontend
       server: https://kubernetes.default.svc
   clusterResourceWhitelist:
     - group: '*'

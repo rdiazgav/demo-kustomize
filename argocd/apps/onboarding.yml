@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: onboarding
-  namespace: openshift-gitops
+  namespace: openshift-operators
 spec:
   project: default
   source:
@@ -12,7 +12,7 @@ spec:
     targetRevision: master
   destination:
     server: https://kubernetes.default.svc
-    namespace: openshift-gitops
+    namespace: openshift-operators
   syncPolicy:
     automated:
       prune: true
